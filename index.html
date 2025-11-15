@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع إيلاف الترحيبي 🌸</title>
+  <style>
+    body {
+      font-family: "Tajawal", sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffd700, #a0e7e5);
+      text-align: center;
+      padding: 40px;
+      animation: gradient 10s ease infinite;
+      background-size: 400% 400%;
+    }
+
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 48px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    p {
+      color: #fff;
+      font-size: 22px;
+      margin: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    img {
+      width: 350px;
+      height: 250px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>مرحباً بكم في موقع إيلاف 🌸</h1>
+  <p>سعيدة جداً بزيارتكم موقعي الجميل! هنا تجدون لمسة من الألوان والحيوية تعبر عني 🌈</p>
+
+  <img id="slider" src="https://i.imgur.com/w1eKkzj.jpg" alt="صورة ترحيبية">
+
+  <p>أتمنى أن تنال الصور إعجابكم، وأن تكون زيارتكم مليئة بالإيجابية والجمال 💕</p>
+
+  <button onclick="alert('شكراً لزيارتك موقع إيلاف! 🌷')">اضغط هنا ❤️</button>
+
+  <script>
+    let images = [
+      "https://i.imgur.com/w1eKkzj.jpg",
+      "https://i.imgur.com/7FvM9zB.jpg",
+      "https://i.imgur.com/Y6hOKQd.jpg",
+      "https://i.imgur.com/Ec2qAhb.jpg"
+    ];
+    let index = 0;
+
+    function changeImage() {
+      document.getElementById("slider").src = images[index];
+      index = (index + 1) % images.length;
+    }
+
+    setInterval(changeImage, 3000);
+  </script>
+
+</body>
+</html>
